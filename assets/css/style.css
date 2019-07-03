@@ -1,0 +1,67 @@
+body {
+    background-image: url("../images/united-squares-negative.jpg");
+
+}
+
+
+
+header {
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: black;
+    align-content: center;
+    background-color: aqua;
+    padding: 10px 100px;
+    margin: 10px auto;
+    width: 100%;
+
+}
+
+p {
+    font-size: 20px;
+    color: darkcyan;
+}
+
+.container {
+    margin: 10px 50px;
+
+}
+
+#gameover {
+    font-size: 30px;
+    font-weight: bolder;
+    color: red;
+}
+
+
+#score {
+    font-size: 20px;
+    font-weight: bolder;
+    color: cadetblue
+}
+
+#chancesleft {
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+
+}
+
+#computerguessed {
+    font-size: 20px;
+    font-weight: bolder;
+    color: darkolivegreen;
+}
+
+.b1 {
+    border-style: double;
+    padding: 10px 10px;
+    margin: 0 auto;
+}
+
+.b2 {
+    border-style: solid;
+    padding: 10px 10px;
+    margin: 20px auto;
+}
