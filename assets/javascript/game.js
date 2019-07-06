@@ -5,12 +5,6 @@ var keypresscapture = [];
 var computerguessarray=[];
 var chancesover=false;
 
-
-
-
-
-
-
 // Get the length of the array
 var complen = comp.length;
 
@@ -21,17 +15,14 @@ function guess() {
 
 
 
-//function to stop after x attempts
-function stop() {
-  return;
-}
 
-//Capture the keystroke 
 
 var computersguess = guess();
 
 document.onkeydown = function (event) {
+  //check if there are still chances left
   if(chances>0){
+    //Capture the keystroke 
   var userinput = event.key.toLowerCase();
   
   keypresscapture.push(event.key.toLowerCase());
@@ -63,6 +54,8 @@ document.onkeydown = function (event) {
     alert("wrong. Try again");
   }
 }
+
+//if chances are 0 then no more iterations 
 else {
  
     document.getElementById("gameover").innerHTML = "GAME OVER.Press F5 to start a new game. ";
