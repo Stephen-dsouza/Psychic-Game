@@ -65,9 +65,12 @@ document.onkeydown = function (event) {
 }
 else {
  
-    document.getElementById("gameover").innerHTML = "GAME OVER.<br>Press F5 to start a new game. ";
+    document.getElementById("gameover").innerHTML = "GAME OVER.Press F5 to start a new game. ";
+    computerguessarray.push(computersguess);
+
     document.getElementById("computerguessed").innerHTML = "Computers Guess: " + computerguessarray;
     chancesover=false;
+    computerguessarray=[];
   }
 }
 
