@@ -3,6 +3,12 @@ var score = 0;
 var chances = 4;
 var keypresscapture = [];
 var computerguessarray=[];
+var chancesover=false;
+
+
+
+
+
 
 
 // Get the length of the array
@@ -25,17 +31,20 @@ function stop() {
 var computersguess = guess();
 
 document.onkeydown = function (event) {
+  if(chances>0){
   var userinput = event.key.toLowerCase();
+  
   keypresscapture.push(event.key.toLowerCase());
   
   console.log(computerguessarray);
   console.log(computersguess);
+  
   //Output the user key press
   document.getElementById("userinput1").innerHTML = "You entered: " + keypresscapture;
 
   //If userinput is same as computerguess then up the score,increase the chance and display alert
 
-  if (userinput === computersguess && chances > 0) {
+  if (userinput === computersguess ) {
     computerguessarray.push(computersguess);
     score++;
     document.getElementById("score").innerHTML = "Score is: " + score
@@ -48,16 +57,19 @@ document.onkeydown = function (event) {
   }
 
   //else if chances still less than 4 
-  else if (chances > 0) {
+  else  {
     chances--;
     document.getElementById("chancesleft").innerHTML = "Chances left: " + chances;
     alert("wrong. Try again");
   }
-
-  //else if no chances left
-  else {
+}
+else {
+ 
     document.getElementById("gameover").innerHTML = "GAME OVER.<br>Press F5 to start a new game. ";
-    document.getElementById("computerguessed").innerHTML = "Chances left: " + computerguessarray;
-    stop();
+    document.getElementById("computerguessed").innerHTML = "Computers Guess: " + computerguessarray;
+    chancesover=false;
   }
 }
+
+//else if no chances le
+
